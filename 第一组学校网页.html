@@ -1,0 +1,3028 @@
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dalian Ocean University</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+:root {
+  --ocean-blue: #005A9C;
+  --light-blue: #E6F0FA;
+  --dark-blue: #003D66;
+  --white: #fff;
+  --gray: #f5f5f5;
+}
+body {
+  background: linear-gradient(180deg, 
+    #e1f5fe 0%, 
+    #b3e5fc 25%, 
+    #81d4fa 50%, 
+    #4fc3f7 75%, 
+    #29b6f6 100%);
+  background-attachment: fixed;
+  color: #0d47a1;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* 动态波浪效果 */
+.wave-container {
+  position: fixed;
+  bottom: -100px;
+  left: 0;
+  width: 200%;
+  height: 250px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wave svg {
+  width: 100%;
+  height: 100%;
+}
+
+.wave1 {
+  animation: waveHorizontal1 8s ease-in-out infinite;
+}
+
+.wave2 {
+  animation: waveHorizontal2 10s ease-in-out infinite;
+  opacity: 0.5;
+}
+
+.wave3 {
+  animation: waveHorizontal3 12s ease-in-out infinite;
+  opacity: 0.3;
+}
+
+@keyframes waveHorizontal1 {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-30px); }
+}
+
+@keyframes waveHorizontal2 {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-45px); }
+}
+
+@keyframes waveHorizontal3 {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-60px); }
+}
+
+/* 波浪动画效果 */
+.wave {
+  position: fixed;
+  width: 200%;
+  height: 100px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255,255,255,0.1) 50%, 
+    transparent 100%);
+  border-radius: 50%;
+  animation: wave-animation 10s ease-in-out infinite;
+  z-index: 0;
+}
+
+.wave:nth-child(1) {
+  top: 10%;
+  animation-duration: 12s;
+  opacity: 0.6;
+}
+
+.wave:nth-child(2) {
+  top: 30%;
+  animation-duration: 15s;
+  animation-delay: -2s;
+  opacity: 0.4;
+}
+
+.wave:nth-child(3) {
+  top: 50%;
+  animation-duration: 18s;
+  animation-delay: -4s;
+  opacity: 0.3;
+}
+
+.wave:nth-child(4) {
+  top: 70%;
+  animation-duration: 14s;
+  animation-delay: -6s;
+  opacity: 0.5;
+}
+
+@keyframes wave-animation {
+  0%, 100% {
+    transform: translateX(0) translateY(0);
+  }
+  25% {
+    transform: translateX(-25%) translateY(-10px);
+  }
+  50% {
+    transform: translateX(-50%) translateY(0);
+  }
+  75% {
+    transform: translateX(-25%) translateY(10px);
+  }
+}
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* 顶部区域 */
+.header-top {
+  background: linear-gradient(90deg, 
+    #6ab0e6 0%, 
+    #4a8bc4 25%, 
+    #3a7ab2 50%, 
+    #2d689e 75%, 
+    #235a8a 100%);
+  padding: 14px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(35, 90, 138, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.header-top .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-left: 30px;
+}
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-right: auto;
+}
+.school-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+.school-name {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* 导航栏 */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+  margin-left: auto;
+}
+.navbar .dropdown {
+  position: relative;
+}
+.navbar .dropdown-btn {
+  color: #003d66;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 61, 102, 0.3);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+.navbar .dropdown-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 10px rgba(0, 61, 102, 0.2);
+}
+.navbar .dropdown-content {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: linear-gradient(180deg, rgba(26, 54, 93, 0.98) 0%, rgba(13, 33, 55, 0.98) 100%);
+  backdrop-filter: blur(10px);
+  min-width: 160px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 90, 156, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+  margin-top: 4px;
+  overflow: hidden;
+}
+.navbar .dropdown-content a {
+  color: #fff;
+  padding: 9px 14px;
+  text-decoration: none;
+  display: block;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+.navbar .dropdown-content a:hover {
+  background: rgba(100, 181, 246, 0.2);
+  padding-left: 18px;
+}
+.navbar .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* 搜索栏 */
+.navbar .search-bar {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  padding: 3px 3px 3px 12px;
+  border: 1px solid rgba(0, 61, 102, 0.25);
+}
+.navbar .search-bar input {
+  background: transparent;
+  border: none;
+  color: #003d66;
+  font-size: 13px;
+  padding: 5px 8px;
+  outline: none;
+  width: 100px;
+}
+.navbar .search-bar input::placeholder {
+  color: rgba(0, 61, 102, 0.4);
+}
+.navbar .search-bar button {
+  background: rgba(0, 61, 102, 0.15);
+  border: none;
+  border-radius: 12px;
+  color: #003d66;
+  font-size: 12px;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.navbar .search-bar button:hover {
+  background: rgba(0, 61, 102, 0.25);
+}
+
+/* 语言切换标识 */
+.navbar .lang-switch {
+  color: #003d66;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(0, 61, 102, 0.4);
+}
+.navbar .lang-switch:hover {
+  background: rgba(255, 255, 255, 1);
+}
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.98rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #64b5f6, #42a5f5);
+  transition: width 0.3s ease;
+}
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 90, 156, 0.3);
+}
+.nav-link:hover::before {
+  width: 60%;
+}
+.nav-link:active {
+  transform: translateY(0);
+}
+
+/* 下拉菜单 */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  color: #fff;
+  background: none;
+  border: none;
+  font-size: 0.98rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.dropdown-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: linear-gradient(180deg, #1a365d 0%, #0d2137 100%);
+  min-width: 180px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 90, 156, 0.3);
+  z-index: 1000;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 12px 20px;
+  text-decoration: none;
+  display: block;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  background: rgba(100, 181, 246, 0.2);
+  padding-left: 25px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* 搜索栏 */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 25px;
+  padding: 4px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+.search-bar:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 90, 156, 0.2);
+}
+.search-bar input {
+  padding: 6px 12px;
+  width: 140px;
+  border: none;
+  outline: none;
+  font-size: 0.85rem;
+  border-radius: 20px;
+  background: transparent;
+  color: #fff;
+}
+.search-bar input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.search-bar button {
+  padding: 6px 14px;
+  border: none;
+  background: linear-gradient(135deg, #64b5f6 0%, #42a5f5 100%);
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.85rem;
+  border-radius: 20px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+}
+.search-bar button:hover {
+  background: linear-gradient(135deg, #42a5f5 0%, #2196f3 100%);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(66, 165, 245, 0.4);
+}
+.search-bar button:active {
+  transform: scale(0.98);
+}
+
+/* 主轮播组件 */
+.main-carousel {
+  padding: 40px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e8eef5 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 装饰性背景元素 */
+.main-carousel::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 90, 156, 0.05) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.main-carousel::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -5%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(0, 90, 156, 0.03) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 
+    0 10px 40px rgba(0, 90, 156, 0.12),
+    0 4px 12px rgba(0, 90, 156, 0.08);
+  border: 1px solid rgba(0, 90, 156, 0.1);
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+}
+
+/* 内层阴影效果 */
+.carousel-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a365d;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  filter: contrast(1.02) saturate(1.05);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.carousel-slide:hover .carousel-image {
+  transform: scale(1.02);
+  filter: contrast(1.05) saturate(1.1);
+}
+
+.carousel-image.loading {
+  opacity: 0.5;
+}
+
+.carousel-image.error {
+  content: '';
+  background: #f5f5f5 url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23999" stroke-width="2"%3E%3Crect x="3" y="3" width="18" height="18" rx="2" ry="2"/%3E%3Ccircle cx="8.5" cy="8.5" r="1.5"/%3E%3Cpolyline points="21 15 16 10 5 21"/%3E%3C/svg%3E') center no-repeat;
+  background-size: 48px;
+}
+
+/* 箭头按钮 */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 90, 156, 0.9);
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 4px 15px rgba(0, 90, 156, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.carousel-container:hover .carousel-arrow {
+  opacity: 1;
+  visibility: visible;
+}
+
+.carousel-arrow:hover {
+  background: rgba(0, 90, 156, 1);
+  transform: translateY(-50%) scale(1.15);
+  box-shadow: 
+    0 6px 25px rgba(0, 90, 156, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.carousel-arrow:active {
+  transform: translateY(-50%) scale(1.05);
+}
+
+.carousel-prev-arrow {
+  left: 24px;
+}
+
+.carousel-next-arrow {
+  right: 24px;
+}
+
+.arrow-icon {
+  font-weight: bold;
+  line-height: 1;
+}
+
+/* 指示器 */
+.carousel-indicators {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 14px;
+  z-index: 10;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.indicator-dot {
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.indicator-dot::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.indicator-dot:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: scale(1.2);
+}
+
+.indicator-dot.active {
+  background: #fff;
+  box-shadow: 
+    0 0 0 2px rgba(0, 90, 156, 0.5),
+    0 2px 8px rgba(0, 90, 156, 0.3);
+  transform: scale(1.2);
+}
+
+.indicator-dot.active::before {
+  background: rgba(0, 90, 156, 0.2);
+  transform: scale(1.5);
+}
+
+/* 加载状态 */
+.carousel-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: #666;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 24px 36px;
+  border-radius: 12px;
+  z-index: 20;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.loading-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #e0e0e0;
+  border-top-color: var(--ocean-blue);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .main-carousel {
+    padding: 20px 0;
+  }
+  
+  .carousel-container {
+    aspect-ratio: 16 / 10;
+    border-radius: 12px;
+  }
+  
+  .carousel-arrow {
+    width: 44px;
+    height: 44px;
+    font-size: 24px;
+  }
+  
+  .carousel-prev-arrow {
+    left: 12px;
+  }
+  
+  .carousel-next-arrow {
+    right: 12px;
+  }
+  
+  .indicator-dot {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .carousel-indicators {
+    gap: 10px;
+    bottom: 16px;
+    padding: 8px 16px;
+  }
+}
+
+/* NOTICE板块 */
+.notice-section {
+  padding: 24px 0;
+  background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+  border-bottom: 1px solid #ffd54f;
+}
+
+.notice-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.notice-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 110px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 3px 12px rgba(245, 124, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.notice-label::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.notice-icon {
+  font-size: 20px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.notice-content {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.notice-text-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.notice-text {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.7;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.notice-text:hover {
+  color: #f57c00;
+}
+
+.notice-date {
+  color: #f57c00;
+  font-weight: 600;
+  white-space: nowrap;
+  font-size: 16px;
+}
+
+.notice-description {
+  color: #444;
+  font-size: 16px;
+}
+
+.notice-more {
+  color: #f57c00;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.3s;
+  margin-left: auto;
+  flex-shrink: 0;
+  align-self: center;
+  letter-spacing: 0.5px;
+}
+
+.notice-more:hover {
+  color: #b71c1c;
+  text-decoration: underline;
+}
+
+/* 轮播板块 */
+.carousel-section {
+  padding: 40px 0;
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.news-wrapper {
+  display: flex;
+  gap: 30px;
+  align-items: stretch;
+}
+
+.news-left {
+  flex: 2;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-right {
+  flex: 1;
+  min-width: 0;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e8eef5;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--dark-blue);
+  margin: 0 0 25px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.news-right .carousel-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--dark-blue);
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  position: relative;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.news-right .carousel-title::after {
+  content: '';
+  width: 45px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--ocean-blue), var(--dark-blue));
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 2px;
+}
+
+.news-right .carousel-title::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: var(--ocean-blue);
+  border-radius: 50%;
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-50%) scale(1.2);
+    opacity: 0.7;
+  }
+}
+
+.carousel-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--ocean-blue);
+  border-radius: 2px;
+}
+
+/* 新闻列表 */
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.news-item {
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #e8eef5;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.news-item:hover {
+  border-color: var(--ocean-blue);
+  box-shadow: 0 2px 8px rgba(0, 90, 156, 0.1);
+}
+
+.news-date {
+  display: inline-block;
+  font-size: 13px;
+  color: #6b7c93;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.news-content {
+  font-size: 15px;
+  color: #2c3e50;
+  line-height: 1.65;
+  font-weight: 400;
+  display: block;
+}
+
+.news-item:hover .news-content {
+  color: var(--ocean-blue);
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+  .notice-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .notice-label {
+    min-width: auto;
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  .notice-content {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .notice-text {
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  
+  .news-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .news-left, .news-right {
+    width: 100%;
+  }
+  
+  .news-right {
+    margin-top: 20px;
+  }
+  
+  .news-item {
+    flex: none;
+  }
+}
+
+/* News轮播 - 使用与主轮播相同的结构 */
+.news-carousel-section {
+  width: 100%;
+}
+
+.news-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 
+    0 10px 40px rgba(0, 90, 156, 0.12),
+    0 4px 12px rgba(0, 90, 156, 0.08);
+}
+
+.news-carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.news-carousel-slide {
+  flex: 0 0 100%;
+  height: 100%;
+  position: relative;
+}
+
+.news-carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  filter: contrast(1.05) saturate(1.08) brightness(1.02);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.news-carousel-slide:hover img {
+  transform: scale(1.03);
+  filter: contrast(1.08) saturate(1.12) brightness(1.03);
+}
+
+.news-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 90, 156, 0.9);
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 4px 15px rgba(0, 90, 156, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.news-carousel-wrapper:hover .news-carousel-arrow {
+  opacity: 1;
+  visibility: visible;
+}
+
+.news-carousel-arrow:hover {
+  background: rgba(0, 90, 156, 1);
+  transform: translateY(-50%) scale(1.15);
+}
+
+.news-carousel-arrow:active {
+  transform: translateY(-50%) scale(1.05);
+}
+
+.news-carousel-prev {
+  left: 24px;
+}
+
+.news-carousel-next {
+  right: 24px;
+}
+
+.news-carousel-indicators {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 14px;
+  z-index: 10;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.news-indicator-dot {
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.news-indicator-dot:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: scale(1.2);
+}
+
+.news-indicator-dot.active {
+  background: #fff;
+  box-shadow: 
+    0 0 0 2px rgba(0, 90, 156, 0.5),
+    0 2px 8px rgba(0, 90, 156, 0.3);
+  transform: scale(1.2);
+}
+
+.carousel-intro {
+  background: linear-gradient(135deg, var(--light-blue) 0%, rgba(0, 90, 156, 0.08) 100%);
+  padding: 32px 20px;
+  margin-top: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 90, 156, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 90, 156, 0.06);
+}
+
+.carousel-intro .intro-text {
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  font-size: 22px;
+  color: var(--dark-blue);
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.7;
+  letter-spacing: 0.5px;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.carousel-intro .intro-text em {
+  font-style: italic;
+  color: var(--ocean-blue);
+  font-weight: 600;
+}
+
+.hero-text{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  color:#fff;
+  text-align:center;
+  text-shadow:0 2px 5px #00000080;
+}
+
+/* 快捷入口 */
+.quick-links{background:rgba(255,255,255,0.7);backdrop-filter:blur(15px);padding:40px 0;text-align:center;border-bottom:1px solid rgba(255,255,255,0.3);}
+.quick-container{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;}
+.quick-col{width:220px;}
+.quick-col h3{color:var(--ocean-blue);margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--light-blue);}
+.quick-items{display:flex;flex-direction:column;gap:6px;margin-top:8px;}
+
+/* 数据板块 - University Profile */
+.numbers{
+  background: linear-gradient(135deg, 
+    rgba(0, 60, 100, 0.95) 0%, 
+    rgba(0, 90, 150, 0.92) 30%, 
+    rgba(0, 120, 200, 0.9) 60%, 
+    rgba(50, 150, 230, 0.88) 100%);
+  backdrop-filter: blur(20px);
+  padding: 60px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 40px 40px;
+  box-shadow: 0 10px 40px rgba(0, 90, 150, 0.3);
+}
+
+.numbers::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -20%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(100, 200, 255, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: floatOrb 8s ease-in-out infinite;
+}
+
+.numbers::after {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -15%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(50, 150, 230, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: floatOrb 10s ease-in-out infinite reverse;
+}
+
+@keyframes floatOrb {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+/* 额外装饰元素 */
+.numbers .decorative-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+}
+
+.numbers .decorative-wave svg {
+  width: 200%;
+  height: 100%;
+  animation: waveScroll 15s linear infinite;
+}
+
+@keyframes waveScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.numbers .container {
+  position: relative;
+  z-index: 1;
+}
+
+.numbers h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.numbers h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #fff, transparent);
+  border-radius: 2px;
+}
+
+.data-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:18px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.data-item{
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 28px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.data-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.num{
+  font-size: 48px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 10px;
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  letter-spacing: -2px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.data-item p {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* 视频板块 */
+.video-section {
+  padding: 50px 20px;
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.video-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.video-section h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--dark-blue);
+  text-align: center;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #000;
+}
+
+.university-video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  display: block;
+}
+
+/* 体育板块 */
+.sports-section {
+  padding: 40px 0;
+  background: linear-gradient(135deg, #1a365d 0%, #2d4a7c 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.sports-header {
+  max-width: 1200px;
+  margin: 0 auto 24px auto;
+  padding: 0 20px;
+}
+
+.sports-header h2 {
+  font-size: 30px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #64b5f6 0%, #42a5f5 50%, #2196f3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+  text-shadow: 0 0 30px rgba(100, 181, 246, 0.5);
+  transition: all 0.3s ease;
+}
+
+.sports-header h2:hover {
+  background: linear-gradient(135deg, #42a5f5 0%, #64b5f6 50%, #90caf9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 40px rgba(100, 181, 246, 0.7);
+  transform: translateY(-2px);
+}
+
+.sports-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #64b5f6, #42a5f5, transparent);
+  border-radius: 2px;
+}
+
+.sports-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sports-carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.sports-carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.sports-slide {
+  min-width: 100%;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sports-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.sports-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--ocean-blue);
+  z-index: 20;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.sports-arrow:hover {
+  background: var(--ocean-blue);
+  color: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.sports-arrow-left {
+  left: 35px;
+}
+
+.sports-arrow-right {
+  right: 35px;
+}
+
+.sports-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: #fff;
+  text-align: center;
+}
+
+.sports-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.sports-subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  opacity: 0.95;
+  letter-spacing: 2px;
+}
+
+/* 新闻区域 */
+.news-section{background:linear-gradient(135deg, #f8fafc 0%, #eef4f8 100%);padding:40px 0;}
+.news-container{display:flex;gap:35px;flex-wrap:wrap;}
+.news-left,.news-right{flex:1;min-width:280px;}
+.news-header{display:flex;justify-content:space-between;align-items:center;border-bottom:3px solid var(--ocean-blue);padding-bottom:12px;margin-bottom:20px;position:relative;}
+.news-header::after{content:'';position:absolute;bottom:-3px;left:0;width:60px;height:3px;background:var(--dark-blue);}
+.news-header h2{color:var(--dark-blue);font-size:28px;font-weight:700;letter-spacing:1px;}
+.more-news{color:var(--ocean-blue);text-decoration:none;font-weight:600;font-size:15px;transition:all 0.3s ease;}
+.more-news:hover{color:var(--dark-blue);text-decoration:underline;}
+.news-list{list-style:none;margin:0;padding:0;}
+.news-list li{padding:14px 18px;border-bottom:1px solid rgba(0, 90, 156, 0.1);position:relative;background:linear-gradient(90deg, rgba(0, 90, 156, 0.02) 0%, transparent 100%);transition:all 0.3s ease;}
+.news-list li:hover{background:linear-gradient(90deg, rgba(0, 90, 156, 0.08) 0%, rgba(0, 90, 156, 0.02) 100%);transform:translateX(5px);}
+.news-list li::before{content:"›";color:var(--ocean-blue);position:absolute;left:8px;font-weight:700;font-size:18px;transition:color 0.3s ease;}
+.news-list li:hover::before{color:var(--dark-blue);}
+.news-categories{list-style:none;margin:0;padding:0;}
+.news-categories li{padding:12px 15px;border-bottom:1px solid rgba(0, 90, 156, 0.08);transition:all 0.3s ease;}
+.news-categories li:hover{background:rgba(0, 90, 156, 0.05);padding-left:20px;}
+.news-categories a{color:#333;text-decoration:none;font-weight:500;transition:color 0.3s ease;}
+.news-categories li:hover a{color:var(--ocean-blue);}
+
+/* RESEARCH图片展示板块 */
+.research-section {
+  padding: 0;
+  margin: 40px 0;
+  background: linear-gradient(135deg, 
+    rgba(100, 180, 230, 0.9) 0%, 
+    rgba(80, 160, 220, 0.85) 25%, 
+    rgba(60, 145, 210, 0.8) 50%, 
+    rgba(50, 130, 200, 0.75) 75%, 
+    rgba(40, 120, 190, 0.7) 100%);
+  backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: 0 15px 40px rgba(60, 140, 200, 0.3);
+}
+
+.research-section::before {
+  content: '';
+  position: absolute;
+  top: -60%;
+  right: -25%;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(100, 200, 255, 0.18) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: floatGlow 12s ease-in-out infinite;
+}
+
+.research-section::after {
+  content: '';
+  position: absolute;
+  bottom: -40%;
+  left: -15%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(60, 160, 230, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: floatGlow 15s ease-in-out infinite reverse;
+}
+
+/* 额外装饰圆环 */
+.research-section .ring-decoration {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 120px;
+  height: 120px;
+  border: 2px solid rgba(100, 200, 255, 0.15);
+  border-radius: 50%;
+  animation: ringPulse 6s ease-in-out infinite;
+}
+
+.research-section .ring-decoration::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: 136px;
+  height: 136px;
+  border: 1px solid rgba(100, 200, 255, 0.08);
+  border-radius: 50%;
+}
+
+@keyframes floatGlow {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.8; }
+  50% { transform: translateY(-25px) scale(1.05); opacity: 1; }
+}
+
+@keyframes ringPulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.1); opacity: 0.3; }
+}
+
+.research-section .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.research-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  position: relative;
+  padding-bottom: 15px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.research-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #fff, transparent);
+  border-radius: 2px;
+}
+
+.research-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.research-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(200, 230, 250, 0.3) 0%, rgba(180, 220, 245, 0.25) 50%, rgba(160, 200, 235, 0.2) 100%);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(100, 180, 230, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(12px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.research-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(100, 180, 230, 0.35);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.research-image {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  max-height: 380px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.research-item:hover .research-image {
+  transform: scale(1.03);
+}
+
+.research-caption {
+  color: #fff;
+  padding: 22px 30px 25px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* 科研板块 */
+.research{background:var(--light-blue);padding:40px 0;text-align:center;}
+.research h2{margin-bottom:25px;color:var(--dark-blue);}
+.research-cards{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  align-items:stretch;
+}
+.research-card{
+  background:#fff;
+  width:280px;
+  padding:25px;
+  border-radius:8px;
+  border-top:4px solid var(--ocean-blue);
+  text-align:left;
+  display:flex;
+  flex-direction:column;
+}
+/* 标题允许自动换行，不做省略 */
+.research-card h3{
+  margin-bottom:10px;
+  color:var(--dark-blue);
+}
+.research-card p{
+  line-height:1.6;
+  margin-bottom:15px;
+  flex-grow:1;
+}
+/* 链接统一贴在卡片底部，全部对齐 */
+.learn-more{
+  color:var(--ocean-blue);
+  text-decoration:none;
+}
+.learn-more:hover{
+  text-decoration:underline;
+}
+
+/* 校园生活图片展播 */
+.campus-life-gallery {
+  padding: 50px 0;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.campus-life-gallery .container {
+  max-width: 1400px;
+}
+
+.campus-life-gallery h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--dark-blue);
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.campus-life-gallery h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--ocean-blue), transparent);
+  border-radius: 2px;
+}
+
+.gallery-masonry {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.gallery-item {
+  width: 140px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.gallery-slide {
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #1a365d 0%, #0d2137 100%);
+}
+
+.gallery-image-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-image-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 90, 156, 0.08) 0%, transparent 50%, rgba(0, 90, 156, 0.08) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  filter: contrast(1.05) saturate(1.08) brightness(1.02);
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gallery-slide:hover .gallery-image {
+  transform: scale(1.03);
+  filter: contrast(1.08) saturate(1.12) brightness(1.03);
+}
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  letter-spacing: 1px;
+}
+
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  background: rgba(0, 90, 156, 0.7);
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-wrapper:hover .gallery-arrow {
+  opacity: 1;
+  visibility: visible;
+}
+
+.gallery-arrow:hover {
+  background: rgba(0, 90, 156, 0.95);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-50%) scale(1.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.gallery-prev {
+  left: 25px;
+}
+
+.gallery-next {
+  right: 25px;
+}
+
+.gallery-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+  padding: 8px 18px;
+  background: rgba(0, 90, 156, 0.6);
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.gallery-indicator-dot {
+  width: 10px;
+  height: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-indicator-dot:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: scale(1.2);
+}
+
+.gallery-indicator-dot.active {
+  background: linear-gradient(135deg, #64b5f6, #42a5f5);
+  border-color: #fff;
+  box-shadow: 0 0 8px rgba(100, 181, 246, 0.5);
+  transform: scale(1.2);
+}
+
+.gallery-thumbs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.thumb-item {
+  width: 100px;
+  height: 70px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.thumb-item:hover {
+  border-color: var(--ocean-blue);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 90, 156, 0.2);
+}
+
+.thumb-item.active {
+  border-color: var(--ocean-blue);
+  box-shadow: 0 0 0 3px rgba(0, 90, 156, 0.2), 0 4px 12px rgba(0, 90, 156, 0.15);
+}
+
+.thumb-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .campus-life-gallery h2 {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+  
+  .gallery-track {
+    height: 280px;
+  }
+  
+  .gallery-arrow {
+    width: 44px;
+    height: 44px;
+    font-size: 24px;
+  }
+  
+  .gallery-prev {
+    left: 15px;
+  }
+  
+  .gallery-next {
+    right: 15px;
+  }
+  
+  .gallery-caption {
+    font-size: 16px;
+    padding: 15px;
+  }
+  
+  .thumb-item {
+    width: 70px;
+    height: 50px;
+  }
+  
+  .gallery-thumbs {
+    gap: 10px;
+  }
+}
+
+/* 校园板块 */
+.campus{background:#fff;padding:40px 0;text-align:center;}
+.campus h2{display:inline-block;margin-bottom:20px;padding-bottom:8px;border-bottom:2px solid var(--ocean-blue);}
+.campus-list{font-size:16px;line-height:2;}
+
+/* 页脚 */
+footer{
+  background: linear-gradient(180deg, 
+    #005a9c 0%, 
+    #003d66 50%, 
+    #002d4a 100%);
+  color:#fff;
+  padding:40px 0;
+}
+.footer-container{
+  display:flex;
+  gap:30px;
+  flex-wrap:wrap;
+}
+.footer-col{
+  flex:1;
+  min-width:220px;
+}
+.footer-col h3{
+  margin-bottom:15px;
+  padding-bottom:8px;
+  border-bottom:1px solid rgba(255, 255, 255, 0.3);
+}
+.footer-col p{
+  line-height:1.8;
+  color:rgba(255, 255, 255, 0.8);
+}
+.footer-col a{
+  color:rgba(255, 255, 255, 0.8);
+  text-decoration:none;
+}
+.copyright{
+  text-align:center;
+  margin-top:30px;
+  padding-top:15px;
+  border-top:1px solid rgba(255, 255, 255, 0.2);
+  color:rgba(255, 255, 255, 0.6);
+}
+/* 板块头部 */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* MORE链接样式 */
+.more-link {
+  font-size: 14px;
+  color: #1e88e5;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 14px;
+  border: 1px solid #1e88e5;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.more-link:hover {
+  background: #1e88e5;
+  color: #fff;
+}
+
+/* 社交媒体链接 */
+.social-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+.social-link svg {
+  width: 20px;
+  height: 20px;
+}
+.social-link:hover {
+  transform: translateY(-3px);
+}
+
+/* 微信图标 */
+.social-link:nth-child(1) {
+  background: linear-gradient(135deg, #07c160 0%, #06ad56 100%);
+}
+
+/* 微博图标 */
+.social-link:nth-child(2) {
+  background: linear-gradient(135deg, #e6162d 0%, #c41230 100%);
+}
+
+/* 抖音图标 */
+.social-link:nth-child(3) {
+  background: linear-gradient(135deg, #fe2c55 0%, #fe4447 50%, #ff0000 100%);
+}
+</style>
+</head>
+<body>
+    <!-- 动态波浪背景 -->
+    <div class="wave-container">
+        <div class="wave wave1">
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill="rgba(33, 150, 243, 0.3)" d="M0,128L48,144C96,160,192,192,288,181.3C384,171,480,117,576,112C672,107,768,149,864,165.3C960,181,1056,171,1152,149.3C1248,128,1344,96,1392,80L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+        <div class="wave wave2">
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill="rgba(66, 165, 245, 0.25)" d="M0,192L48,202.7C96,213,192,235,288,213.3C384,192,480,128,576,122.7C672,117,768,171,864,181.3C960,192,1056,160,1152,149.3C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+        <div class="wave wave3">
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill="rgba(100, 181, 246, 0.2)" d="M0,64L48,85.3C96,107,192,149,288,149.3C384,149,480,107,576,101.3C672,96,768,128,864,144C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </div>
+
+<div class="header-top">
+    <div class="container">
+        <div class="logo-wrap">
+            <img src="校徽.png" alt="School Logo" class="school-logo">
+            <div class="school-name">DALIAN OCEAN UNIVERSITY</div>
+        </div>
+        
+        <div class="navbar">
+            <div class="dropdown">
+                <button class="dropdown-btn">Home</button>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn">About</button>
+                <div class="dropdown-content">
+                    <a href="#">About DLOU</a>
+                    <a href="#">History</a>
+                    <a href="#">Leadership</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn">Academics</button>
+                <div class="dropdown-content">
+                    <a href="#">Colleges</a>
+                    <a href="#">Programs</a>
+                    <a href="#">Admissions</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn">Research</button>
+                <div class="dropdown-content">
+                    <a href="#">Research Centers</a>
+                    <a href="#">Projects</a>
+                    <a href="#">Publications</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn">Collaboration</button>
+                <div class="dropdown-content">
+                    <a href="#">Partnerships</a>
+                    <a href="#">International</a>
+                    <a href="#">Industry Links</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn">News&Events</button>
+                <div class="dropdown-content">
+                    <a href="#">Latest News</a>
+                    <a href="#">Events</a>
+                    <a href="#">Calendar</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn">Campus Life</button>
+                <div class="dropdown-content">
+                    <a href="#">Student Life</a>
+                    <a href="#">Facilities</a>
+                    <a href="#">Activities</a>
+                </div>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
+            </div>
+            
+            <div class="lang-switch">CN</div>
+        </div>
+    </div>
+</div>
+
+<!-- 主轮播组件 -->
+<section class="main-carousel">
+    <div class="container">
+        <div class="carousel-wrapper">
+            <div class="carousel-container">
+                <!-- 轮播轨道 -->
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <img src="banner1.jpg" alt="Banner 1" class="carousel-image" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="banner2.jpg" alt="Banner 2" class="carousel-image" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="43e29f27b6883d0e5514004c2d3aca6a.jpg" alt="Banner 3" class="carousel-image" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="banner4.jpg" alt="Banner 4" class="carousel-image" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 左右箭头按钮 -->
+            <button class="carousel-arrow carousel-prev-arrow" id="mainPrevBtn" aria-label="上一张">
+                <span class="arrow-icon">‹</span>
+            </button>
+            <button class="carousel-arrow carousel-next-arrow" id="mainNextBtn" aria-label="下一张">
+                <span class="arrow-icon">›</span>
+            </button>
+            
+            <!-- 指示器 -->
+            <div class="carousel-indicators" id="mainIndicators">
+                <button class="indicator-dot active" data-index="0" aria-label="切换到第1张"></button>
+                <button class="indicator-dot" data-index="1" aria-label="切换到第2张"></button>
+                <button class="indicator-dot" data-index="2" aria-label="切换到第3张"></button>
+                <button class="indicator-dot" data-index="3" aria-label="切换到第4张"></button>
+            </div>
+            
+            <!-- 加载状态 -->
+            <div class="carousel-loading" id="carouselLoading">
+                <div class="loading-spinner"></div>
+                <span>加载中...</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="notice-section">
+    <div class="container">
+        <div class="notice-wrapper">
+            <div class="notice-label">
+                <span class="notice-icon">📢</span>
+                <span>NOTICE</span>
+            </div>
+            <div class="notice-content">
+                <div class="notice-text-wrapper">
+                    <div class="notice-text">
+                        <span class="notice-date">[2026-05-16]</span>
+                        <span class="notice-description">Exclusive Shuttle Service Launched for Daheishi Campus.</span>
+                    </div>
+                    <div class="notice-text">
+                        <span class="notice-date">[2026-05-18]</span>
+                        <span class="notice-description">Fire Safety Evacuation Drill Scheduled.</span>
+                    </div>
+                    <div class="notice-text">
+                        <span class="notice-date">[2026-05-25]</span>
+                        <span class="notice-description">Call for Nominations: Undergraduate Academic Affairs Contacts.</span>
+                    </div>
+                </div>
+                <a href="#" class="notice-more">Read More ›</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="carousel-section">
+    <div class="container">
+        <div class="news-wrapper">
+            <div class="news-left">
+                <div class="section-header">
+                    <h2 class="carousel-title">Latest News</h2>
+                    <a href="#" class="more-link">MORE →</a>
+                </div>
+                
+                <!-- News轮播组件 -->
+                <div class="news-carousel-section">
+                    <div class="news-carousel-wrapper">
+                        <div class="news-carousel-track" id="newsCarouselTrack">
+                            <div class="news-carousel-slide">
+                                <img src="图片1.png" alt="Academic Program">
+                            </div>
+                            <div class="news-carousel-slide">
+                                <img src="图片2.png" alt="International Exchange">
+                            </div>
+                            <div class="news-carousel-slide">
+                                <img src="图片3.png" alt="Research Collaboration">
+                            </div>
+                            <div class="news-carousel-slide">
+                                <img src="图片5.png" alt="Academic Delegation">
+                            </div>
+                            <div class="news-carousel-slide">
+                                <img src="43e29f27b6883d0e5514004c2d3aca6a.jpg" alt="Campus Scenery">
+                            </div>
+                        </div>
+                        
+                        <!-- 左右箭头按钮 -->
+                        <button class="news-carousel-arrow news-carousel-prev" id="newsPrevBtn" aria-label="Previous">
+                            <span class="arrow-icon">‹</span>
+                        </button>
+                        <button class="news-carousel-arrow news-carousel-next" id="newsNextBtn" aria-label="Next">
+                            <span class="arrow-icon">›</span>
+                        </button>
+                        
+                        <!-- 指示器 -->
+                        <div class="news-carousel-indicators" id="newsIndicators">
+                            <button class="news-indicator-dot active" data-index="0" aria-label="Go to slide 1"></button>
+                            <button class="news-indicator-dot" data-index="1" aria-label="Go to slide 2"></button>
+                            <button class="news-indicator-dot" data-index="2" aria-label="Go to slide 3"></button>
+                            <button class="news-indicator-dot" data-index="3" aria-label="Go to slide 4"></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-intro">
+                    <div class="intro-text" id="introText">DLOU Launches Advanced Vocational Training Program for Marine Technology Professionals</div>
+                </div>
+            </div>
+            <div class="news-right">
+                <div class="section-header">
+                    <h2 class="carousel-title">News Highlights</h2>
+                    <a href="#" class="more-link">MORE →</a>
+                </div>
+                <div class="news-list">
+                    <div class="news-item">
+                        <span class="news-date">May 25, 2026</span>
+                        <span class="news-content">DLOU Signs Collaborative Agreement with Far Eastern State Technical Fisheries University</span>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-date">May 22, 2026</span>
+                        <span class="news-content">Environmental Science & Ecology Enters ESI Global Top 1%</span>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-date">May 19, 2026</span>
+                        <span class="news-content">Malaysian Delegation from Sabah State Visits DLOU to Strengthen Academic Partnerships</span>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-date">March 6, 2026</span>
+                        <span class="news-content">President Du Ming Hosts High-Level Talks with Sabah State Delegation</span>
+                    </div>
+                    <div class="news-item">
+                        <span class="news-date">February 23, 2026</span>
+                        <span class="news-content">DLOU Research Team Undertakes Collaborative Studies in Norway and Iceland</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="academic-events-section">
+    <div class="container">
+        <div class="sports-header">
+            <h2>EVENTS</h2>
+            <a href="#" class="more-link">MORE →</a>
+        </div>
+        <div class="sports-container">
+            <div class="sports-carousel-wrapper">
+                <button class="sports-arrow sports-arrow-left" id="sportsPrevBtn" aria-label="Previous">‹</button>
+                <button class="sports-arrow sports-arrow-right" id="sportsNextBtn" aria-label="Next">›</button>
+                <div class="sports-carousel" id="sportsCarousel">
+                <div class="sports-slide">
+                    <img src="sports-banner.jpg" alt="Academic Event" class="sports-image">
+                    <div class="sports-overlay">
+                        <h2 class="sports-title">INTERNATIONAL MARINE SCIENCE SYMPOSIUM</h2>
+                        <p class="sports-subtitle">Exploring Sustainable Ocean Resources Management</p>
+                    </div>
+                </div>
+                <div class="sports-slide">
+                    <img src="sports-banner2.jpg" alt="Academic Event" class="sports-image">
+                    <div class="sports-overlay">
+                        <h2 class="sports-title">ANNUAL RESEARCH ACHIEVEMENTS FORUM</h2>
+                        <p class="sports-subtitle">Showcasing Excellence in Marine Technology Innovation</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="research-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>RESEARCH</h2>
+            <a href="#" class="more-link">MORE →</a>
+        </div>
+        <div class="research-content">
+            <div class="research-item">
+                <img src="微信图片_20260527092749_554_7.jpg" alt="Environmental Research" class="research-image">
+                <p class="research-caption">Environmental Science & Ecology ranked ESI Global Top 1%</p>
+            </div>
+            <div class="research-item">
+                <img src="微信图片_20260527092557_553_7.png" alt="Marine AI Research" class="research-image">
+                <p class="research-caption">Advanced AI models for marine biological data analysis</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="numbers">
+    <div class="container">
+        <h2>University Profile</h2>
+        <div class="data-grid">
+            <div class="data-item"><div class="num">1952</div><p>Established</p></div>
+            <div class="data-item"><div class="num">16</div><p>Academic Schools</p></div>
+            <div class="data-item"><div class="num">20,000+</div><p>Enrolled Students</p></div>
+            <div class="data-item"><div class="num">1,200+</div><p>Faculty Staff</p></div>
+            <div class="data-item"><div class="num">35+</div><p>International Partners</p></div>
+        </div>
+    </div>
+</div>
+
+<div class="video-section">
+    <div class="container">
+        <h2>About Dalian Ocean University</h2>
+        <div class="video-container">
+            <video controls preload="metadata" class="university-video">
+                <source src="大连海洋大学三分钟宣传片英文版.m4v" type="video/mp4">
+                <source src="大连海洋大学三分钟宣传片英文版.m4v" type="video/x-m4v">
+                <p>Your browser does not support HTML5 video. Please download the video file: <a href="大连海洋大学三分钟宣传片英文版.m4v">Download Video</a></p>
+            </video>
+        </div>
+    </div>
+</div>
+
+<section class="campus-life-gallery">
+    <div class="container">
+        <div class="section-header">
+            <h2>Our Campus Life</h2>
+            <a href="#" class="more-link">MORE →</a>
+        </div>
+        <div class="gallery-masonry">
+            <div class="gallery-item">
+                <img src="11fc07fd915b937c5b82f86e956c87b8.jpg" alt="Campus Activity">
+            </div>
+            <div class="gallery-item">
+                <img src="12d688013e5ba2572879e0baacc51093.jpg" alt="Campus Activity">
+            </div>
+            <div class="gallery-item">
+                <img src="31b95bed-25fb-4e20-8e9e-7d4486a0ed8e_s.jpg" alt="Campus Activity">
+            </div>
+            <div class="gallery-item">
+                <img src="15469ac5-df1b-4da7-b525-85341de5ba7d_s.jpg" alt="Campus Activity">
+            </div>
+            <div class="gallery-item">
+                <img src="81291b9e7e4127f1f04ed01e1fca22b3.jpg" alt="Campus Activity">
+            </div>
+            <div class="gallery-item">
+                <img src="a28d2430-8d05-4a88-acb1-354f9ddb26cf_s.jpg" alt="Campus Activity">
+            </div>
+            <div class="gallery-item">
+                <img src="cded1ba1d2ba5adee34773386c6ff0a5.jpg" alt="Campus Activity">
+            </div>
+            <div class="gallery-item">
+                <img src="cfdbc4e718b0ddea0f7ae720fb973a1d.jpg" alt="Campus Activity">
+            </div>
+            <div class="gallery-item">
+                <img src="dc54afd4e93e1a02761bd35456e54ca8.jpg" alt="Campus Activity">
+            </div>
+            <div class="gallery-item">
+                <img src="e8c2bfcf82c7b883bc6785fa1b90be68.jpg" alt="Campus Activity">
+            </div>
+            <div class="gallery-item">
+                <img src="fe4b00a24be658fc58060ff825e22eb6.jpg" alt="Campus Activity">
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p>Address: No.52, Heishijiao Street, Dalian 116023</p>
+                <p>Phone: +86-411-84762652 / +86-411-84763008</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <p>About Us</p><p>Library</p><p>Faculties</p><p>Map</p>
+            </div>
+            <div class="footer-col">
+                <h3>Follow Us</h3>
+                <p>Official Website</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" title="微信">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c4.801 0 8.692-3.287 8.692-7.342 0-4.054-3.89-7.34-8.692-7.34z"/>
+                            <ellipse cx="5.785" cy="10.682" rx="1.387" ry="1.593"/>
+                            <ellipse cx="12.07" cy="10.682" rx="1.387" ry="1.593"/>
+                            <path d="M5.28 15.882c-.54 0-.977-.44-.977-.981 0-.542.438-.982.977-.982.54 0 .978.44.978.982 0 .54-.438.981-.978.981zm6.79 0c-.54 0-.977-.44-.977-.981 0-.542.438-.982.977-.982.54 0 .978.44.978.982 0 .54-.438.981-.978.981z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" title="微博">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 12a4 4 0 0 1 4-4v2a2 2 0 0 0 2 2 2 2 0 0 1 2 2v2a4 4 0 0 1-4 4"/>
+                            <circle cx="8" cy="12" r="1"/>
+                            <circle cx="16" cy="12" r="1"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" title="抖音">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                            <path d="M9 15V9l6 3-6 3z"/>
+                            <circle cx="12" cy="12" r="1.5"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright © Dalian Ocean University. All Rights Reserved.
+        </div>
+    </div>
+</footer>
+
+<script>
+// News轮播组件 JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    const newsCarouselTrack = document.getElementById('newsCarouselTrack');
+    const newsCarouselWrapper = newsCarouselTrack.parentElement;
+    const newsPrevBtn = document.getElementById('newsPrevBtn');
+    const newsNextBtn = document.getElementById('newsNextBtn');
+    const newsIndicators = document.querySelectorAll('.news-indicator-dot');
+    const introText = document.getElementById('introText');
+    
+    let newsCurrentIndex = 0;
+    let newsAutoPlayInterval;
+    const newsTotalSlides = 4; // 图片1, 图片2, 图片3, 图片5
+    
+    const captions = [
+        "2025 Autumn 'New Quality Artisans' Vocational Training Program Launched",
+        "President Du Ming Leads Delegation aboard Russian Tall Ship <em>Pallada</em>",
+        "Deputy Chief Minister of Sabah Leads Delegation to Visit Our University",
+        "Deputy Party Secretary Li Zhijun Leads Delegation to Russia"
+    ];
+    
+    // 切换到指定索引
+    function goToNewsSlide(index) {
+        if (index < 0) {
+            index = newsTotalSlides - 1;
+        } else if (index >= newsTotalSlides) {
+            index = 0;
+        }
+        
+        newsCurrentIndex = index;
+        
+        const slideWidth = newsCarouselWrapper.offsetWidth;
+        newsCarouselTrack.style.transform = `translateX(-${newsCurrentIndex * slideWidth}px)`;
+        
+        // 更新指示器
+        newsIndicators.forEach((dot, i) => {
+            dot.classList.toggle('active', i === newsCurrentIndex);
+        });
+        
+        // 更新介绍语
+        introText.innerHTML = captions[newsCurrentIndex];
+    }
+    
+    // 下一张
+    function nextNewsSlide() {
+        goToNewsSlide(newsCurrentIndex + 1);
+    }
+    
+    // 上一张
+    function prevNewsSlide() {
+        goToNewsSlide(newsCurrentIndex - 1);
+    }
+    
+    // 开始自动轮播
+    function startNewsAutoPlay() {
+        newsAutoPlayInterval = setInterval(nextNewsSlide, 6000);
+    }
+    
+    // 停止自动轮播
+    function stopNewsAutoPlay() {
+        if (newsAutoPlayInterval) {
+            clearInterval(newsAutoPlayInterval);
+        }
+    }
+    
+    // 重置自动轮播定时器
+    function resetNewsAutoPlay() {
+        stopNewsAutoPlay();
+        setTimeout(startNewsAutoPlay, 7000);
+    }
+    
+    // 按钮点击事件
+    newsPrevBtn.addEventListener('click', function() {
+        prevNewsSlide();
+        resetNewsAutoPlay();
+    });
+    
+    newsNextBtn.addEventListener('click', function() {
+        nextNewsSlide();
+        resetNewsAutoPlay();
+    });
+    
+    // 指示器点击事件
+    newsIndicators.forEach((dot, index) => {
+        dot.addEventListener('click', function() {
+            goToNewsSlide(index);
+            resetNewsAutoPlay();
+        });
+    });
+    
+    // 鼠标进入暂停自动轮播
+    newsCarouselWrapper.addEventListener('mouseenter', function() {
+        stopNewsAutoPlay();
+    });
+    
+    // 鼠标离开恢复自动轮播
+    newsCarouselWrapper.addEventListener('mouseleave', function() {
+        resetNewsAutoPlay();
+    });
+    
+    // 窗口大小改变时重新计算
+    window.addEventListener('resize', function() {
+        const slideWidth = newsCarouselWrapper.offsetWidth;
+        newsCarouselTrack.style.transform = `translateX(-${newsCurrentIndex * slideWidth}px)`;
+    });
+    
+    // 开始自动轮播
+    startNewsAutoPlay();
+});
+</script>
+
+<script>
+// 体育事件轮播组件 JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    const sportsCarousel = document.getElementById('sportsCarousel');
+    const sportsCarouselWrapper = sportsCarousel.parentElement;
+    const sportsPrevBtn = document.getElementById('sportsPrevBtn');
+    const sportsNextBtn = document.getElementById('sportsNextBtn');
+    const sportsSlides = document.querySelectorAll('.sports-slide');
+    
+    let sportsCurrentIndex = 0;
+    let sportsAutoPlayInterval;
+    const sportsTotalSlides = sportsSlides.length;
+    
+    // 切换到指定索引
+    function goToSportsSlide(index) {
+        if (index < 0) {
+            index = sportsTotalSlides - 1;
+        } else if (index >= sportsTotalSlides) {
+            index = 0;
+        }
+        
+        sportsCurrentIndex = index;
+        
+        const slideWidth = sportsCarouselWrapper.offsetWidth;
+        sportsCarousel.style.transform = `translateX(-${sportsCurrentIndex * slideWidth}px)`;
+    }
+    
+    // 下一张
+    function nextSportsSlide() {
+        goToSportsSlide(sportsCurrentIndex + 1);
+    }
+    
+    // 上一张
+    function prevSportsSlide() {
+        goToSportsSlide(sportsCurrentIndex - 1);
+    }
+    
+    // 按钮点击事件
+    sportsPrevBtn.addEventListener('click', function() {
+        prevSportsSlide();
+    });
+    
+    sportsNextBtn.addEventListener('click', function() {
+        nextSportsSlide();
+    });
+    
+    // 窗口大小改变时重新计算
+    window.addEventListener('resize', function() {
+        const slideWidth = sportsCarouselWrapper.offsetWidth;
+        sportsCarousel.style.transform = `translateX(-${sportsCurrentIndex * slideWidth}px)`;
+    });
+});
+</script>
+
+<script>
+// 主轮播组件 JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    // 获取DOM元素
+    const carouselWrapper = document.querySelector('.carousel-wrapper');
+    const carouselContainer = document.querySelector('.carousel-container');
+    const carouselTrack = document.querySelector('.carousel-track');
+    const prevBtn = document.getElementById('mainPrevBtn');
+    const nextBtn = document.getElementById('mainNextBtn');
+    const indicators = document.querySelectorAll('.indicator-dot');
+    const loadingOverlay = document.getElementById('carouselLoading');
+    const images = document.querySelectorAll('.carousel-image');
+    
+    // 轮播状态
+    let currentIndex = 0;
+    let autoPlayInterval;
+    let isAutoPlaying = true;
+    let imageLoadCount = 0;
+    const totalImages = images.length;
+    
+    // 初始化加载状态
+    loadingOverlay.style.display = 'flex';
+    
+    // 图片预加载和错误处理
+    images.forEach((img, index) => {
+        // 创建预加载图像
+        const preloadImg = new Image();
+        
+        // 加载成功
+        preloadImg.onload = function() {
+            img.src = this.src;
+            imageLoadCount++;
+            
+            // 所有图片加载完成
+            if (imageLoadCount === totalImages) {
+                loadingOverlay.style.display = 'none';
+                startAutoPlay();
+            }
+        };
+        
+        // 加载失败 - 显示占位图
+        preloadImg.onerror = function() {
+            img.src = '';
+            img.classList.add('error');
+            imageLoadCount++;
+            
+            if (imageLoadCount === totalImages) {
+                loadingOverlay.style.display = 'none';
+                startAutoPlay();
+            }
+        };
+        
+        // 开始预加载
+        preloadImg.src = img.getAttribute('src');
+    });
+    
+    // 切换到指定索引
+    function goToSlide(index) {
+        // 边界处理
+        if (index < 0) {
+            index = totalImages - 1;
+        } else if (index >= totalImages) {
+            index = 0;
+        }
+        
+        currentIndex = index;
+        
+        // 更新轨道位置
+        const slideWidth = carouselWrapper.offsetWidth;
+        carouselTrack.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        
+        // 更新指示器
+        indicators.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
+        });
+    }
+    
+    // 下一张
+    function nextSlide() {
+        goToSlide(currentIndex + 1);
+    }
+    
+    // 上一张
+    function prevSlide() {
+        goToSlide(currentIndex - 1);
+    }
+    
+    // 开始自动轮播
+    function startAutoPlay() {
+        if (isAutoPlaying) {
+            stopAutoPlay();
+            autoPlayInterval = setInterval(nextSlide, 5000);
+        }
+    }
+    
+    // 停止自动轮播
+    function stopAutoPlay() {
+        if (autoPlayInterval) {
+            clearInterval(autoPlayInterval);
+            autoPlayInterval = null;
+        }
+    }
+    
+    // 重置自动轮播定时器
+    function resetAutoPlay() {
+        stopAutoPlay();
+        setTimeout(startAutoPlay, 5000);
+    }
+    
+    // 点击事件监听
+    prevBtn.addEventListener('click', function() {
+        prevSlide();
+        resetAutoPlay();
+    });
+    
+    nextBtn.addEventListener('click', function() {
+        nextSlide();
+        resetAutoPlay();
+    });
+    
+    // 指示器点击事件
+    indicators.forEach((dot, index) => {
+        dot.addEventListener('click', function() {
+            goToSlide(index);
+            resetAutoPlay();
+        });
+    });
+    
+    // 鼠标进入暂停自动轮播
+    carouselWrapper.addEventListener('mouseenter', function() {
+        stopAutoPlay();
+    });
+    
+    // 鼠标离开恢复自动轮播（5秒后）
+    carouselWrapper.addEventListener('mouseleave', function() {
+        resetAutoPlay();
+    });
+    
+    // 窗口大小改变时重新计算
+    window.addEventListener('resize', function() {
+        // 更新当前位置
+        const slideWidth = carouselWrapper.offsetWidth;
+        carouselTrack.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    });
+});
+</script>
+
+<script>
+// Research轮播组件 JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    const researchCarouselTrack = document.getElementById('researchCarouselTrack');
+    const researchCarouselWrapper = document.getElementById('researchCarouselWrapper');
+    const researchPrevBtn = document.getElementById('researchPrevBtn');
+    const researchNextBtn = document.getElementById('researchNextBtn');
+    const researchIndicators = document.querySelectorAll('.research-indicator-dot');
+    
+    let researchCurrentIndex = 0;
+    let researchAutoPlayInterval;
+    const researchTotalSlides = 2;
+    
+    function goToResearchSlide(index) {
+        if (index < 0) {
+            index = researchTotalSlides - 1;
+        } else if (index >= researchTotalSlides) {
+            index = 0;
+        }
+        
+        researchCurrentIndex = index;
+        
+        const slideWidth = researchCarouselWrapper.offsetWidth;
+        researchCarouselTrack.style.transform = `translateX(-${researchCurrentIndex * slideWidth}px)`;
+        
+        researchIndicators.forEach((dot, i) => {
+            dot.classList.toggle('active', i === researchCurrentIndex);
+        });
+    }
+    
+    function nextResearchSlide() {
+        goToResearchSlide(researchCurrentIndex + 1);
+    }
+    
+    function prevResearchSlide() {
+        goToResearchSlide(researchCurrentIndex - 1);
+    }
+    
+    researchPrevBtn.addEventListener('click', function() {
+        prevResearchSlide();
+    });
+    
+    researchNextBtn.addEventListener('click', function() {
+        nextResearchSlide();
+    });
+    
+    researchIndicators.forEach((dot, index) => {
+        dot.addEventListener('click', function() {
+            goToResearchSlide(index);
+        });
+    });
+    
+    window.addEventListener('resize', function() {
+        const slideWidth = researchCarouselWrapper.offsetWidth;
+        researchCarouselTrack.style.transform = `translateX(-${researchCurrentIndex * slideWidth}px)`;
+    });
+});
+</script>
+
+<script>
+// Campus Life Gallery JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    const campusGalleryTrack = document.getElementById('campusGalleryTrack');
+    const campusGalleryWrapper = document.getElementById('campusGalleryWrapper');
+    const campusPrevBtn = document.getElementById('campusPrevBtn');
+    const campusNextBtn = document.getElementById('campusNextBtn');
+    const campusIndicators = document.querySelectorAll('.gallery-indicator-dot');
+    const thumbItems = document.querySelectorAll('.thumb-item');
+    
+    let campusCurrentIndex = 0;
+    let campusAutoPlayInterval;
+    const campusTotalSlides = 6;
+    
+    function goToCampusSlide(index) {
+        if (index < 0) {
+            index = campusTotalSlides - 1;
+        } else if (index >= campusTotalSlides) {
+            index = 0;
+        }
+        
+        campusCurrentIndex = index;
+        
+        const slideWidth = campusGalleryWrapper.offsetWidth;
+        campusGalleryTrack.style.transform = `translateX(-${campusCurrentIndex * slideWidth}px)`;
+        
+        campusIndicators.forEach((dot, i) => {
+            dot.classList.toggle('active', i === campusCurrentIndex);
+        });
+        
+        thumbItems.forEach((thumb, i) => {
+            thumb.classList.toggle('active', i === campusCurrentIndex);
+        });
+    }
+    
+    function nextCampusSlide() {
+        goToCampusSlide(campusCurrentIndex + 1);
+    }
+    
+    function prevCampusSlide() {
+        goToCampusSlide(campusCurrentIndex - 1);
+    }
+    
+    function startCampusAutoPlay() {
+        campusAutoPlayInterval = setInterval(nextCampusSlide, 5000);
+    }
+    
+    function stopCampusAutoPlay() {
+        if (campusAutoPlayInterval) {
+            clearInterval(campusAutoPlayInterval);
+        }
+    }
+    
+    function resetCampusAutoPlay() {
+        stopCampusAutoPlay();
+        setTimeout(startCampusAutoPlay, 5000);
+    }
+    
+    campusPrevBtn.addEventListener('click', function() {
+        prevCampusSlide();
+        resetCampusAutoPlay();
+    });
+    
+    campusNextBtn.addEventListener('click', function() {
+        nextCampusSlide();
+        resetCampusAutoPlay();
+    });
+    
+    campusIndicators.forEach((dot, index) => {
+        dot.addEventListener('click', function() {
+            goToCampusSlide(index);
+            resetCampusAutoPlay();
+        });
+    });
+    
+    thumbItems.forEach((thumb, index) => {
+        thumb.addEventListener('click', function() {
+            goToCampusSlide(index);
+            resetCampusAutoPlay();
+        });
+    });
+    
+    campusGalleryWrapper.addEventListener('mouseenter', function() {
+        stopCampusAutoPlay();
+    });
+    
+    campusGalleryWrapper.addEventListener('mouseleave', function() {
+        resetCampusAutoPlay();
+    });
+    
+    window.addEventListener('resize', function() {
+        const slideWidth = campusGalleryWrapper.offsetWidth;
+        campusGalleryTrack.style.transform = `translateX(-${campusCurrentIndex * slideWidth}px)`;
+    });
+    
+    startCampusAutoPlay();
+});
+
+
+</script>
+
+</body>
+</html>
